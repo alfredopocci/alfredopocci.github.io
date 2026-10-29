@@ -44,7 +44,7 @@
         }
 
         /* ----------------------------------------------------
-            1. SCHERMATA INTRO LOGO (3 SECONDI)
+           1. SCHERMATA INTRO LOGO (3 SECONDI)
         ---------------------------------------------------- */
         #loader {
             position: fixed;
@@ -80,7 +80,7 @@
         }
 
         /* ----------------------------------------------------
-            2. BIGLIETTO DA VISITA DIGITALE
+           2. BIGLIETTO DA VISITA DIGITALE
         ---------------------------------------------------- */
         .card {
             width: 90%;
@@ -214,4 +214,100 @@
         .company-name {
             font-weight: 800;
             font-size: 1.1rem;
-            margin-bottom: 4px
+            margin-bottom: 4px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .piva-text {
+            color: rgba(255, 255, 255, 0.6) !important;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0.6) !important;
+            text-decoration: none !important;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* ----------------------------------------------------
+           ANIMAZIONI LENTE
+        ---------------------------------------------------- */
+        .animate-in {
+            animation: fadeInVerySlow 3.2s cubic-bezier(0.1, 1, 0.2, 1) forwards;
+        }
+
+        .animate-line {
+            animation: expandLineVerySlow 3.2s cubic-bezier(0.1, 1, 0.2, 1) forwards;
+        }
+
+        @keyframes fadeInVerySlow {
+            0% {
+                opacity: 0;
+                transform: translateY(25px);
+                filter: blur(12px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0px);
+            }
+        }
+
+        @keyframes expandLineVerySlow {
+            0% {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+
+        /* TEMPI DI APPARIZIONE */
+        .delay-1 { animation-delay: 3.8s; } /* Nome */
+        .delay-2 { animation-delay: 4.3s; } /* Ruolo */
+        .delay-3 { animation-delay: 4.8s; } /* Linea Rossa */
+        .delay-4 { animation-delay: 5.3s; } /* Email */
+        .delay-5 { animation-delay: 5.8s; } /* Telefono */
+        .delay-6 { animation-delay: 6.3s; } /* Azienda */
+    </style>
+</head>
+
+<body>
+
+    <!-- INTRO LOGO -->
+    <div id="loader">
+        <img src="logo intro.png" alt="Logo" class="intro-logo-img">
+    </div>
+
+    <!-- CARD DIGITALE -->
+    <div class="card">
+        <div class="header-content">
+            <!-- Nome e Cognome -->
+            <div class="name-title animate-in delay-1">
+                ALFREDO<br>POCCI
+            </div>
+
+            <!-- Ruolo Professionale -->
+            <div class="job-title animate-in delay-2">
+                Vendita Veicoli Industriali
+            </div>
+
+            <!-- Linea Rossa MAN -->
+            <div class="red-line animate-line delay-3"></div>
+
+            <!-- Contatti -->
+            <div class="contact-info">
+                <!-- EMAIL CON ICONA SVG BIANCA -->
+                <a href="mailto:alfredo.impromart@gmail.com" class="btn-action animate-in delay-4">
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    alfredo.impromart@gmail.com
+                </a>
+
+                <!-- TELEFONO CON ICONA SVG BIANCA -->
+                <a href="#" onclick="handlePhoneClick(event)" class="btn-action animate-in delay-5">
+                    <svg class="svg-icon" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12
