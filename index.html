@@ -274,7 +274,7 @@
 
 <body>
 
-    <!-- INTRO LOGO -->
+    <!-- INTRO LOGO CON CONTROLLO DI SICUREZZA -->
     <div id="loader">
         <img src="logo intro.png" alt="Logo" class="intro-logo-img" onerror="hideLoaderInstantly()">
     </div>
@@ -335,7 +335,7 @@
         // Rimozione normale del loader dopo 2.8s
         setTimeout(hideLoaderInstantly, 2800);
 
-        // Funzione di sicurezza extra: se per qualsiasi motivo si blocca, sblocca dopo 4 secondi
+        // Funzione di sicurezza extra: se l'immagine impiega troppo, sblocca dopo 4 secondi
         setTimeout(() => {
             const loader = document.getElementById("loader");
             if (loader && loader.style.display !== 'none') {
@@ -355,7 +355,7 @@ FN:Alfredo Pocci
 ORG:Impromart SRL
 TITLE:Venditore Veicoli Industriali
 TEL;TYPE=CELL:+393662699882
-EMAIL;TYPE=WORK:alfredo.impromart@gmail.com
+EMAIL;TYPE=WORK:alfredo.impromart@gmail.+gmail.com
 ADR;TYPE=WORK:;;Traversa Fossitelli snc;Napoli;;80147;Italy
 END:VCARD`;
 
